@@ -1,12 +1,12 @@
 public class Zeri extends Champion implements RangedChampion {
 
     public Zeri(String name) {
-        super(name, 600, 56, 24, 330);
+        super(name, GameConstants.ZERI_HP, GameConstants.ZERI_AD, GameConstants.ZERI_DF, GameConstants.ZERI_MS);
     }
 
     @Override
     public void kite() {
-        System.out.println(getName() + " 카이팅!\n");
+        System.out.println(getName() + " 카이팅!");
     }
 
     @Override

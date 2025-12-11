@@ -1,12 +1,12 @@
 public class KaiSa extends Champion implements RangedChampion {
 
     public KaiSa(String name) {
-        super(name, 640, 59, 25, 335);
+        super(name, GameConstants.KAISA_HP, GameConstants.KAISA_AD, GameConstants.KAISA_DF, GameConstants.KAISA_MS);
     }
 
     @Override
     public void kite() {
-        System.out.println(getName() + " 카이팅!\n");
+        System.out.println(getName() + " 카이팅!");
     }
 
     @Override

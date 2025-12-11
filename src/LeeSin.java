@@ -1,7 +1,7 @@
 public class LeeSin extends Champion implements MeleeChampion {
 
     public LeeSin(String name) {
-        super(name, 645, 66, 36, 345);
+        super(name, GameConstants.LEESIN_HP, GameConstants.LEESIN_AD, GameConstants.LEESIN_DF, GameConstants.LEESIN_MS);
     }
 
     @Override

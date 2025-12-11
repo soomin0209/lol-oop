@@ -1,7 +1,7 @@
 public class Viego extends Champion implements MeleeChampion, WarriorChampion {
 
     public Viego(String name) {
-        super(name, 630, 57, 34, 345);
+        super(name, GameConstants.VIEGO_HP, GameConstants.VIEGO_AD, GameConstants.VIEGO_DF, GameConstants.VIEGO_MS);
     }
 
     @Override
