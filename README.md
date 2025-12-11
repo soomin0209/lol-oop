@@ -1,5 +1,5 @@
 # LoL로 객체지향 파밍하기
-## 🐰 달리기반 과제
+## 🐰 달리기반
 
 <details>
 <summary><strong> 1회차 과제</strong></summary>
