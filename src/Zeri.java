@@ -1,7 +1,7 @@
 public class Zeri extends Champion implements RangedChampion {
 
     public Zeri(String name) {
-        super(name, GameConstants.ZERI_HP, GameConstants.ZERI_AD, GameConstants.ZERI_DF, GameConstants.ZERI_MS);
+        super(name, GameConstants.ZERI_HP, GameConstants.ZERI_AD, GameConstants.ZERI_DF, GameConstants.ZERI_MS, ChampionType.MARKSMAN);
     }
 
     @Override
@@ -28,8 +28,20 @@ public class Zeri extends Champion implements RangedChampion {
     }
 
     @Override
-    public void useR(Champion target) {
+    public void useUltimate(Champion target) {
         System.out.println(getName() + "의 번개 방출(R)!");
         target.takeDamage(100);
+    }
+
+    // 이속 400 이상이어야 true
+    @Override
+    public boolean canResurrect() {
+        return getMovementSpeed() >= 400;
+    }
+
+    @Override
+    protected void resurrectBuff() {
+        new Log(getName() + " 부활 버프: 이동 속도 50 증가!");
+        increaseSpeed(50, 0);
     }
 }

@@ -1,3 +1,3 @@
-public interface WarriorChampion {
+public interface FighterChampion {
     void strike(Champion target);
 }

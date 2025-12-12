@@ -1,7 +1,7 @@
 public class LeeSin extends Champion implements MeleeChampion {
 
     public LeeSin(String name) {
-        super(name, GameConstants.LEESIN_HP, GameConstants.LEESIN_AD, GameConstants.LEESIN_DF, GameConstants.LEESIN_MS);
+        super(name, GameConstants.LEESIN_HP, GameConstants.LEESIN_AD, GameConstants.LEESIN_DF, GameConstants.LEESIN_MS, ChampionType.FIGHTER);
     }
 
     @Override
@@ -29,8 +29,20 @@ public class LeeSin extends Champion implements MeleeChampion {
     }
 
     @Override
-    public void useR(Champion target) {
+    public void useUltimate(Champion target) {
         System.out.println(getName() + "의 용의 분노(R)!");
         target.takeDamage(100);
+    }
+
+    // 레벨 3 이상이어야 true
+    @Override
+    public boolean canResurrect() {
+        return getLevel() >= 3;
+    }
+
+    @Override
+    protected void resurrectBuff() {
+        new Log(getName() + " 부활 버프: 체력 20 증가!");
+        healHp(20);
     }
 }

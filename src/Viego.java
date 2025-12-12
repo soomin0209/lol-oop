@@ -1,7 +1,10 @@
-public class Viego extends Champion implements MeleeChampion, WarriorChampion {
+public class Viego extends Champion implements MeleeChampion, FighterChampion {
+
+    // 궁 사용 여부 확인
+    private static boolean usedUseR = false;
 
     public Viego(String name) {
-        super(name, GameConstants.VIEGO_HP, GameConstants.VIEGO_AD, GameConstants.VIEGO_DF, GameConstants.VIEGO_MS);
+        super(name, GameConstants.VIEGO_HP, GameConstants.VIEGO_AD, GameConstants.VIEGO_DF, GameConstants.VIEGO_MS, ChampionType.FIGHTER);
     }
 
     @Override
@@ -35,8 +38,18 @@ public class Viego extends Champion implements MeleeChampion, WarriorChampion {
     }
 
     @Override
-    public void useR(Champion target) {
+    public void useUltimate(Champion target) {
         System.out.println(getName() + "의 심장 파괴자(R)!");
         target.takeDamage(120);
+        usedUseR = true;
     }
+
+    // 궁극기 한번이라도 사용했으면 true
+    @Override
+    public boolean canResurrect() {
+        return usedUseR;
+    }
+
+    // resurrectBuff 오버라이딩 X
+    // 부활 시 버프 효과 없음
 }

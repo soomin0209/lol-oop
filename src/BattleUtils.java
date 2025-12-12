@@ -4,7 +4,7 @@ public class BattleUtils {
     public static Champion pickHighHp(Champion a, Champion b, Champion c, Champion d) {
         Champion[] champions = {a, b, c, d};
         Champion winner = champions[0];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < champions.length; i++) {
             if (champions[i].getHp() > winner.getHp()) {
                 winner = champions[i];
             }
