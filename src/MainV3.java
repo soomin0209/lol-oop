@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class MainV3 {
 
     public static void main(String[] args) {
@@ -39,5 +41,11 @@ public class MainV3 {
         System.out.println(leesin);
         System.out.println(zeri);
         System.out.println(viego);
+        System.out.println();
+
+        // 제네릭 와일드카드 호출
+        Team.printTeamMembers(new ArrayList<KaiSa>());
+        Team.printTeamMembers(new ArrayList<Champion>());
+        // 서로 다른 타입이여도 컴파일 에러 ❌
     }
 }
