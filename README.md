@@ -41,3 +41,16 @@
 - 부활(resurrect) 메서드를 템플릿 메서드 패턴으로 확장해보기
 
 </details>
+
+<details>
+<summary><strong> 3회차 과제</strong></summary>
+
+### [필수미션]
+- 랜덤 1:1 전투 시뮬레이션
+- 서로 팀에서 랜덤한 챔피언 하나씩 꺼내 싸우게 해보기
+
+### [선택미션]
+- 제네릭 와일드카드(? extends Champion) 적용해보기
+- 잘못된 제네릭 설계 사례 만들고 고쳐보기
+  
+</details>
